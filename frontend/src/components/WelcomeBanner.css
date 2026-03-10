@@ -1,0 +1,68 @@
+.welcome-banner {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-glass);
+  border-radius: 28px;
+  padding: 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-main);
+}
+
+.banner-date {
+  font-size: 0.85rem;
+  color: var(--primary);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+.welcome-banner h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.welcome-banner p {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.banner-illustration {
+  font-size: 4.5rem;
+  filter: drop-shadow(0 0 15px var(--primary));
+  opacity: 0.9;
+}
+
+/* Theme adaptation for banner text gradient in dark mode */
+[data-theme='dark'] .welcome-banner h1 {
+  background: linear-gradient(to right, #fff, var(--text-secondary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glowing back-blobs */
+.welcome-banner::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--primary);
+  filter: blur(100px);
+  opacity: 0.1;
+  top: -150px;
+  right: -50px;
+  border-radius: 50%;
+}

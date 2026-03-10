@@ -1,0 +1,219 @@
+.dashboard-page {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.section-label {
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.see-all-link {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.see-all-link:hover {
+  color: var(--secondary);
+  filter: drop-shadow(0 0 8px var(--secondary));
+}
+
+.finance-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+}
+
+.dashboard-grid-main {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 3rem;
+}
+
+.courses-mini-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.course-mini-card {
+  background: var(--bg-card);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--border-glass);
+  border-radius: 20px;
+  padding: 2.5rem 2rem !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+  transition: all 0.3s ease;
+}
+
+.course-mini-card:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transform: translateY(-4px);
+}
+
+.course-badge {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.8rem;
+}
+
+.course-info p {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+}
+
+.view-btn-premium {
+  background: var(--bg-main);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  padding: 0.8rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.view-btn-premium:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+}
+
+.instructors-list-premium {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.instructors-list-premium img {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  border: 2px solid var(--border-glass);
+  padding: 2px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.instructors-list-premium img:hover {
+  border-color: var(--primary);
+  box-shadow: 0 0 15px rgba(99, 102, 241, 0.2);
+}
+
+
+.dashboard-grid-main-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+.courses-vertical-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.course-row-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.course-row-item:hover {
+  background: var(--border-glass);
+}
+
+.course-icon-bg {
+  width: 44px;
+  height: 44px;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.course-row-details {
+  flex: 1;
+}
+
+.course-title-small {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.course-meta-small {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.p-6 {
+  padding: 1.5rem !important;
+}
+
+@media (max-width: 1400px) {
+  .dashboard-grid-main-3col {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 1024px) {
+  .finance-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .dashboard-grid-main-3col {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .finance-grid {
+    grid-template-columns: 1fr;
+  }
+}
