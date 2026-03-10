@@ -17,7 +17,6 @@ A premium, high-end "Luminous Glass" Student Dashboard built with the MERN stack
 - **Backend**: Node.js, Express, MongoDB (Mongoose)
 - **Styling**: Vanilla CSS (Premium Design System)
 - **Authentification**: JWT (JSON Web Tokens)
-- **Payment Integration**: Razorpay
 
 ## 🚀 Getting Started
 
