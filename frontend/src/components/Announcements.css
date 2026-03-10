@@ -8,7 +8,7 @@
   display: flex;
   gap: 1.2rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--glass-bg);
   border: 1px solid var(--border-glass);
   border-radius: 20px;
   transition: var(--transition);
@@ -16,23 +16,23 @@
 }
 
 .notice-item:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: var(--bg-card);
+  border-color: var(--primary);
   transform: translateX(8px);
-  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .notice-icon {
   width: 48px;
   height: 48px;
-  background: var(--glass-glow);
+  background: var(--primary-bg);
   border-radius: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--primary);
   flex-shrink: 0;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
 .notice-content {
@@ -42,7 +42,7 @@
 .notice-content h4 {
   font-size: 1rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 0.4rem;
 }
 

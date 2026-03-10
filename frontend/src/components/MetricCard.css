@@ -18,15 +18,15 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, transparent 100%);
   z-index: 0;
 }
 
 .metric-card-new:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--bg-card);
   transform: translateY(-10px);
-  border-color: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  border-color: var(--primary);
+  box-shadow: var(--glass-shadow);
 }
 
 .metric-card-new.highlighted {
@@ -55,11 +55,11 @@
   width: 64px;
   height: 64px;
   border-radius: 22px;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--primary-bg);
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
   transition: var(--transition);
   position: relative;
 }
@@ -82,7 +82,7 @@
 .metric-val-new {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-primary);
   letter-spacing: -1px;
 }
 
